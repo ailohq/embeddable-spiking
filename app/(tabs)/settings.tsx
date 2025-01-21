@@ -1,12 +1,11 @@
 import { View, Text, StyleSheet } from 'react-native';
-import React from "react";
 import EmbeddableGLIncome from "@/app/EmbeddableGLIncome";
+import React from "react";
 
 export default function Tab() {
     return (
         <View style={styles.container}>
-            {/*2. under tab: working*/}
-            <Text>This is index tab</Text>
+            <Text>This is setting</Text>
             <EmbeddableGLIncome />
         </View>
     );
