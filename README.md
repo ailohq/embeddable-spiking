@@ -1,6 +1,7 @@
 # Welcome to your Expo app 👋
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+The intention is to spike Embeddable component. Please make sure you config the [API_KEY](https://github.com/ailohq/embeddable-spiking/blob/bf6ef9ee32a9aa7233f2fbb56d85ee487bd1ff46/app/fetchToken.ts#L1-L0) properly before starting the app.
 
 ## Get started
 
