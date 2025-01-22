@@ -1,10 +1,8 @@
 import React, {useEffect} from "react";
 import { Text, View } from 'react-native';
 import {
-    createStaticNavigation,
     useNavigation,
 } from '@react-navigation/native';
-import { Button } from '@react-navigation/elements';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 
 import EmbeddableGLIncome from "@/app/EmbeddableGLIncome";
@@ -18,9 +16,9 @@ function HomeScreen() {
             // alignItems: 'center',
             justifyContent: 'center' }}>
         <Text>Home Screen</Text>
-        <Button onPress={() => navigation.navigate('Profile')}>
-        Go to Profile
-        </Button>
+        {/*<Button onPress={() => navigation.navigate('Profile')}>*/}
+        {/*Go to Profile*/}
+        {/*</Button>*/}
             <EmbeddableGLIncome />
      </View>
 );
@@ -34,19 +32,14 @@ function ProfileScreen() {
             // alignItems: 'center',
             justifyContent: 'center' }}>
     <Text>Profile Screen</Text>
-    <Button onPress={() => navigation.navigate('Home')}>Go to Home</Button>
+    {/*<Button onPress={() => navigation.navigate('Home')}>Go to Home</Button>*/}
     <EmbeddableGLIncome />
 
     </View>
 );
 }
 
-const MyDrawer = createDrawerNavigator({
-    screens: {
-        Home: HomeScreen,
-        Profile: ProfileScreen,
-    },
-});
+const MyDrawer = createDrawerNavigator();
 
 // const Navigation = createStaticNavigation(MyDrawer);
 
@@ -64,8 +57,8 @@ export default function App() {
         <MyDrawer.Navigator
             backBehavior={"history"}
         >
-            <MyDrawer.Screen name={"Home"} children={HomeScreen} />
-            <MyDrawer.Screen name={"Profile"} children={ProfileScreen}/>
+            <MyDrawer.Screen name={"Home"} key={"Home"} component={HomeScreen} />
+            <MyDrawer.Screen name={"Profile"} key={"Profile"} component={ProfileScreen}/>
         </MyDrawer.Navigator>
         // <Text>1222223</Text>
     );

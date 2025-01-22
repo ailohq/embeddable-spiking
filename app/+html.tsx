@@ -1,11 +1,12 @@
 // Learn more https://docs.expo.dev/router/reference/static-rendering/#root-html
 
-import { ScrollViewStyleReset } from 'expo-router/html';
 
 // This file is web-only and used to configure the root HTML for every
 // web page during static rendering.
 // The contents of this function only run in Node.js environments and
 // do not have access to the DOM or browser APIs.
+import {ScrollViewStyleReset} from "expo-router/html";
+
 export default function Root({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
