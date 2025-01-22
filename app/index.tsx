@@ -1,15 +1,14 @@
-import React, {useEffect} from "react";
-import EmbeddableGLIncome from "@/app/EmbeddableGLIncome";
-import {AnotherClickableComponent} from "@/app/AnotherClickableComponent";
+import App from "@/app/App";
 
 export default function Index() {
     return (
         // 1. just component: working
-        <>
-            This is root index
-            <EmbeddableGLIncome />
-            {/*<AnotherClickableComponent />*/}
-        </>
+        // <>
+        //     This is root index
+        //     <EmbeddableGLIncome />
+        //     {/*<AnotherClickableComponent />*/}
+        // </>
         //
+        <App />
     );
 }
