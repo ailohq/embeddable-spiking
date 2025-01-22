@@ -1,14 +1,19 @@
 import App from "@/app/App";
+import {createStackNavigator} from "@react-navigation/stack";
+
+const Stack = createStackNavigator();
 
 export default function Index() {
     return (
-        // 1. just component: working
-        // <>
-        //     This is root index
-        //     <EmbeddableGLIncome />
-        //     {/*<AnotherClickableComponent />*/}
-        // </>
-        //
-        <App />
+        <Stack.Navigator
+          screenOptions={{
+            headerShown: false,
+            cardStyle: {
+              flex: 1
+            }
+          }}
+        >
+          <Stack.Screen name={"Embeddable testing"} component={App} />
+        </Stack.Navigator>
     );
 }

@@ -1,5 +1,5 @@
 import React, {useEffect} from "react";
-import { Text, View } from 'react-native';
+import {Text, View, ViewStyle} from 'react-native';
 import {
     useNavigation,
 } from '@react-navigation/native';
@@ -56,6 +56,10 @@ export default function App() {
         // 2. use react-navigation/drawer  still working
         <Drawer.Navigator
             backBehavior={"history"}
+            screenOptions={{
+                drawerStyle,
+                // drawerType: "permanent"
+            }}
         >
             <Drawer.Screen name={"Home"} key={"Home"} component={HomeScreen} />
             <Drawer.Screen name={"Profile"} key={"Profile"} component={ProfileScreen}/>
@@ -63,3 +67,9 @@ export default function App() {
         // <Text>1222223</Text>
     );
 }
+
+const drawerStyle = {
+    width: 200,
+    // backgroundColor: Colors.CHARCOAL,
+    // borderRightWidth: 0
+} satisfies ViewStyle;
