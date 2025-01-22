@@ -39,7 +39,7 @@ function ProfileScreen() {
 );
 }
 
-const MyDrawer = createDrawerNavigator();
+const Drawer = createDrawerNavigator();
 
 // const Navigation = createStaticNavigation(MyDrawer);
 
@@ -54,12 +54,12 @@ export default function App() {
         // </>
         //
         // 2. use react-navigation/drawer  still working
-        <MyDrawer.Navigator
+        <Drawer.Navigator
             backBehavior={"history"}
         >
-            <MyDrawer.Screen name={"Home"} key={"Home"} component={HomeScreen} />
-            <MyDrawer.Screen name={"Profile"} key={"Profile"} component={ProfileScreen}/>
-        </MyDrawer.Navigator>
+            <Drawer.Screen name={"Home"} key={"Home"} component={HomeScreen} />
+            <Drawer.Screen name={"Profile"} key={"Profile"} component={ProfileScreen}/>
+        </Drawer.Navigator>
         // <Text>1222223</Text>
     );
 }
