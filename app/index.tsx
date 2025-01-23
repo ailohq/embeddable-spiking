@@ -1,4 +1,4 @@
-import App from "@/app/App";
+import BaseDrawerNavigator from "@/app/BaseDrawerNavigator";
 import {createStackNavigator} from "@react-navigation/stack";
 
 const Stack = createStackNavigator();
@@ -13,7 +13,7 @@ export default function Index() {
             }
           }}
         >
-          <Stack.Screen name={"Embeddable testing"} component={App} />
+          <Stack.Screen name={"Embeddable testing"} component={BaseDrawerNavigator} />
         </Stack.Navigator>
     );
 }

@@ -8,43 +8,43 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import EmbeddableGLIncome from "@/app/EmbeddableGLIncome";
 import {AnotherClickableComponent} from "@/app/AnotherClickableComponent";
 
-function HomeScreen() {
-    const navigation = useNavigation();
-
-    return (
-        <View style={{ flex: 1,
-            // alignItems: 'center',
-            justifyContent: 'center' }}>
-        <Text>Home Screen</Text>
-        {/*<Button onPress={() => navigation.navigate('Profile')}>*/}
-        {/*Go to Profile*/}
-        {/*</Button>*/}
-            <EmbeddableGLIncome />
-     </View>
-);
-}
-
-function ProfileScreen() {
-    const navigation = useNavigation();
-
-    return (
-        <View style={{ flex: 1,
-            // alignItems: 'center',
-            justifyContent: 'center' }}>
-    <Text>Profile Screen</Text>
-    {/*<Button onPress={() => navigation.navigate('Home')}>Go to Home</Button>*/}
-    <EmbeddableGLIncome />
-
-    </View>
-);
-}
+// function HomeScreen() {
+//     const navigation = useNavigation();
+//
+//     return (
+//         <View style={{ flex: 1,
+//             // alignItems: 'center',
+//             justifyContent: 'center' }}>
+//         <Text>Home Screen</Text>
+//         {/*<Button onPress={() => navigation.navigate('Profile')}>*/}
+//         {/*Go to Profile*/}
+//         {/*</Button>*/}
+//             <EmbeddableGLIncome />
+//      </View>
+// );
+// }
+//
+// function ProfileScreen() {
+//     const navigation = useNavigation();
+//
+//     return (
+//         <View style={{ flex: 1,
+//             // alignItems: 'center',
+//             justifyContent: 'center' }}>
+//     <Text>Profile Screen</Text>
+//     {/*<Button onPress={() => navigation.navigate('Home')}>Go to Home</Button>*/}
+//     <EmbeddableGLIncome />
+//
+//     </View>
+// );
+// }
 
 const Drawer = createDrawerNavigator();
 
 // const Navigation = createStaticNavigation(MyDrawer);
 
 
-export default function App() {
+export default function BaseDrawerNavigator() {
     return (
         // 1. just component: working
         // <>
@@ -61,8 +61,8 @@ export default function App() {
                 // drawerType: "permanent"
             }}
         >
-            <Drawer.Screen name={"Home"} key={"Home"} component={HomeScreen} />
-            <Drawer.Screen name={"Profile"} key={"Profile"} component={ProfileScreen}/>
+            <Drawer.Screen name={"Embeddable"} key={"Embeddable"} component={EmbeddableGLIncome} />
+            <Drawer.Screen name={"Orlando example"} key={"Orlando example"} component={AnotherClickableComponent}/>
         </Drawer.Navigator>
         // <Text>1222223</Text>
     );
